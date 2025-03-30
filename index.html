@@ -6,20 +6,80 @@
     <title>Pitchdeck - Neventure</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; margin: 0; scroll-behavior: smooth; text-align: center; }
-        section { display: block; line-height: 0; }
-        img { width: 100vw; height: 100vh; object-fit: cover; clip-path: inset(0px 0px 0px 0px); display: block; }
-        nav { position: fixed; top: 0; left: 0; width: 100%; background: white; padding: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); z-index: 100; }
-        nav a { margin: 0 10px; text-decoration: none; color: #333; font-weight: bold; }
+        body { 
+            font-family: 'Roboto', Arial, sans-serif; 
+            margin: 0; 
+            scroll-behavior: smooth; 
+            text-align: center; 
+            background: linear-gradient(to bottom, #f0f4f8, #d9e2ec); 
+        }
+        section { 
+            display: block; 
+            line-height: 0; 
+            margin: 10px 0; /* Add spacing between sections */
+            padding: 10px; /* Add padding for horizontal spacing */
+            background-color: rgb(172,7,128); /* Set background color for spacing */
+        }
+        img { 
+            width: 100%; /* Ensure images resize with the container */
+            height: auto; /* Maintain aspect ratio */
+            clip-path: inset(0px 0px 0px 0px); 
+            display: block; 
+        }
+        nav { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 10px 20px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            z-index: 100; 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+        nav a { 
+            text-decoration: none; 
+            color: #333; 
+            font-weight: bold; 
+            padding: 5px 10px; 
+            border-radius: 5px; 
+            transition: background 0.3s, color 0.3s; 
+            font-size: 1rem; /* Adjust font size for better readability on mobile */
+        }
+        nav a:hover { 
+            background: #007BFF; 
+            color: white; 
+        }
+        footer { 
+            margin-top: 20px; 
+            padding: 10px; 
+            background: rgba(0, 0, 0, 0.8); 
+            color: white; 
+            font-size: 0.9em; 
+            text-align: center; 
+        }
+        @media (max-width: 768px) {
+            nav { 
+                padding: 10px; 
+                gap: 10px; /* Reduce gap between links on smaller screens */
+            }
+            nav a { 
+                font-size: 0.9rem; /* Slightly smaller font size for very small screens */
+            }
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <a href="#page1">Start</a> | 
-        <a href="#page5">Vision</a> | 
-        <a href="#page8">Leistungen</a> | 
-        <a href="#page19">Ablauf</a> | 
-        <a href="#page20">Vorteile</a> 
+        <a href="#page1">Start</a>
+        <a href="#page5">Vision</a>
+        <a href="#page8">Leistungen</a>
+        <a href="#page19">Ablauf</a>
+        <a href="#page20">Vorteile</a>
     </nav>
 
     <section id="page1"><img src="Neventure 1.1_page-0001.jpg" alt="Seite 1"></section>
@@ -43,5 +103,9 @@
     <section id="page19"><img src="Neventure 1.1_page-0019.jpg" alt="Seite 19"></section>
     <section id="page20"><img src="Neventure 1.1_page-0020.jpg" alt="Seite 20"></section>
     <section id="page21"><img src="Neventure 1.1_page-0021.jpg" alt="Seite 21"></section>
-    </body>
+
+    <footer>
+        &copy; 2025 Neventure - Eine CCPM GmbH Marke. Alle Rechte vorbehalten.
+    </footer>
+</body>
 </html>
